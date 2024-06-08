@@ -69,6 +69,7 @@ button {
   font-size: 1rem; // Standard font size for button
   cursor: pointer; // Pointer cursor on hover
   letter-spacing: 1px;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -94,4 +95,8 @@ button:hover {
 
 .register-link a:hover {
   text-decoration: underline; // Underline on hover
+}
+
+.error-msg {
+  color: red; /* Set text color to red */
 }
