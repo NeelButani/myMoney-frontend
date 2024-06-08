@@ -27,7 +27,7 @@
   margin-bottom: 20px; // Space below the login text
   font-size: 1.5rem; // Larger font size
   font-weight: bold; // Bold text
-  color: #333; // Dark gray color for the text
+  color: #5a5656; // Dark gray color for the text
   text-transform: uppercase; // Uppercase text
   letter-spacing: 1px; // Spacing between letters
 }
@@ -40,7 +40,7 @@
 
 .input-group label {
   margin-bottom: 5px; // Space between label and input
-  color: #333; // Dark gray color for the label text
+  color: #5a5656; // Dark gray color for the label text
   font-weight: 600; // Slightly bolder label text
 }
 
@@ -53,7 +53,7 @@
 }
 
 .input-group input:focus {
-  border-color: #333; // Darker border color on focus
+  border-color: #fa6c3d; // Darker border color on focus
   outline: none; // Remove default outline
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); // Slight shadow on focus
 }
@@ -61,17 +61,18 @@
 
 button {
   width: 100%; // Full width button
-  background-color: #333 !important; // Dark gray background for button
+  background-color: #ff7f0e !important; // Dark gray background for button
   border: none !important; // Remove default border
-  color: #fff !important; // White color for button text
+  color: #f8f3f3 !important; // White color for button text
   padding: 10px; // Padding inside the button
   border-radius: 4px; // Rounded corners for button
   font-size: 1rem; // Standard font size for button
   cursor: pointer; // Pointer cursor on hover
+  letter-spacing: 1px;
 }
 
 button:hover {
-  background-color: #555 !important; // Slightly lighter gray on hover
+  background-color: #ff9922 !important; // Slightly lighter gray on hover
 }
 
 
