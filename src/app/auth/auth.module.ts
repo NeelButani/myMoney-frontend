@@ -8,9 +8,11 @@ import { RegisterComponent } from './register/register.component';
 
 // primeNg imports
 import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
 
 const PRIME_NG_IMPORTS = [
-  ButtonModule
+  ButtonModule,
+  InputTextModule
 ]
 
 @NgModule({
