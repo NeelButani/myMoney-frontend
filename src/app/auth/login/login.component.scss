@@ -61,9 +61,9 @@
 
 button {
   width: 100%; // Full width button
-  background-color: #ff7f0e !important; // Dark gray background for button
-  border: none !important; // Remove default border
-  color: #f8f3f3 !important; // White color for button text
+  background-color: #ff7f0e ; // Dark gray background for button
+  border: none ; // Remove default border
+  color: #f8f3f3 ; // White color for button text
   padding: 10px; // Padding inside the button
   border-radius: 4px; // Rounded corners for button
   font-size: 1rem; // Standard font size for button
@@ -73,7 +73,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff9922 !important; // Slightly lighter gray on hover
+  background-color: #ff9922; // Slightly lighter gray on hover
 }
 
 
@@ -98,5 +98,22 @@ button:hover {
 }
 
 .error-msg {
+  margin-top: 10px;
   color: red; /* Set text color to red */
+}
+
+button:disabled,
+button[disabled] {
+  background-color: #ffe6cc; /* Light gray background */
+  border-color: #bbbbbb; /* Slightly darker gray border */
+  color: #666666; /* Dark gray text */
+  cursor: not-allowed; /* Show not-allowed cursor */
+  opacity: 0.6; /* Reduce opacity to indicate disabled state */
+}
+
+button:disabled:hover,
+button[disabled]:hover {
+  background-color: #ff9922; /* Ensure hover state doesn't change color */
+  border-color: #bbbbbb;
+  color: #666666;
 }

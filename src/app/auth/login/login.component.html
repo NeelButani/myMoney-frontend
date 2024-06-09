@@ -1,18 +1,20 @@
 <div class="container">
-  <form class="login-form">
+  <form [formGroup]="loginForm"  class="login-form">
     <h2 class="login-text" >Login</h2>
     <div class="input-group">
       <label for="email">Email</label>
-      <input type="email" id="email" />
+      <input formControlName = "email"  type="email" id="email" />
+      <small class="error-msg" *ngIf="isFieldValid('email')" >Enter email</small>
     </div>
     <div class="input-group">
       <label for="password">Password</label>
-      <input type="password" id="password" />
+      <input formControlName = "password" type="password" id="password" />
+      <small class="error-msg" *ngIf="isFieldValid('password')" >Enter Password</small>
     </div>
-    <div class="error-msg">
-      Invalid Credentials !
+    <div *ngIf="areCredentialInvalid" class="error-msg">
+      {{ inValidMessage }}
     </div>
-    <button>Submit</button>
+    <button [disabled]="loginForm.invalid" (click)="onSubmit()">Submit</button>
     <div class="register-link">
       <span>Don't have an account?</span>
       <a (click)="navigateToRegister()" >Register</a>

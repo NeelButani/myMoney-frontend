@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 // primeNg imports
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const PRIME_NG_IMPORTS = [
   ButtonModule,
@@ -23,7 +24,8 @@ const PRIME_NG_IMPORTS = [
   imports: [
     CommonModule,
     AuthRoutingModule,
-    ...PRIME_NG_IMPORTS
+    ...PRIME_NG_IMPORTS,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }

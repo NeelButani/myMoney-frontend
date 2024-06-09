@@ -66,8 +66,30 @@
   font-size: 1rem; // Standard font size for button
   cursor: pointer; // Pointer cursor on hover
   letter-spacing: 1px;
+  margin-top: 10px;
 }
 
 .register-button:hover {
   background-color: #ff9922; // Lighter orange on hover
+}
+
+button:disabled,
+button[disabled] {
+  background-color: #fedcb7; /* Light gray background */
+  border-color: #bbbbbb; /* Slightly darker gray border */
+  color: #666666; /* Dark gray text */
+  cursor: not-allowed; /* Show not-allowed cursor */
+  opacity: 0.6; /* Reduce opacity to indicate disabled state */
+}
+
+button:disabled:hover,
+button[disabled]:hover {
+  background-color: #ff9922; /* Ensure hover state doesn't change color */
+  border-color: #bbbbbb;
+  color: #666666;
+}
+
+.error-msg {
+  margin-top: 10px;
+  color: red; /* Set text color to red */
 }
