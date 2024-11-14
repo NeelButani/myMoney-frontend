@@ -17,7 +17,7 @@
       <small class="error-msg" *ngIf="isFieldValid('password')" >Enter password</small>
     </div>
     <div *ngIf="somethingWentWrong" class="error-msg">
-      Something went wrong
+      {{ errorMessages }}
     </div>
     <button (click)="onSubmit()" [disabled]="registerForm.invalid" class="register-button">Register</button>
   </form>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../../shared/services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -11,8 +12,9 @@ export class RegisterComponent {
 
   registerForm! : FormGroup;
   somethingWentWrong = false
+  errorMessages = ''
 
-  constructor(private apiService : ApiService){
+  constructor(private apiService : ApiService , private router : Router){
     this.initializeRegisterForm();
   }
 
@@ -39,10 +41,16 @@ export class RegisterComponent {
       const result = await this.apiService.register(registerData);
       if(result){
         console.log("successful registered");
+        this.router.navigate(['login'])
       }
     }catch(error){
       console.error(error);
       this.somethingWentWrong = true;
+      if(error.status === 403){
+         this.errorMessages = 'User already exists'
+      } else {
+        this.errorMessages = 'Something went wrong'
+      }
       this.registerForm.reset();
     }
   }
