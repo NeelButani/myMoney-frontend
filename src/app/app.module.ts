@@ -5,7 +5,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient, withInterceptors } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
+import { loaderInterceptor } from './shared/interceptors/loader.interceptor';
 
 
 @NgModule({
@@ -17,9 +19,12 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     AuthModule,
     BrowserAnimationsModule,
-    HttpClientModule  
+    HttpClientModule,
+    SharedModule
   ],
-  providers: [],
+  providers: [
+     provideHttpClient(withInterceptors([loaderInterceptor]))
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
