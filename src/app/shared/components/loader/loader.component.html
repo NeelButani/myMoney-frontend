@@ -1,1 +1,4 @@
-<p>loader works!</p>
+<!-- using aysnc pipe here instead of subscribing it , async pipe will handle unsubscription too -->
+<div *ngIf = "loader$ | async" class="loader-overlay">
+  <div class="spinner"></div>
+</div>
