@@ -4,6 +4,9 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { CalenderFilterComponent } from './components/calender-filter/calender-filter.component';
 import { FinicialStatsComponent } from './components/finicial-stats/finicial-stats.component';
 import { AddRecordsComponent } from './components/add-records/add-records.component';
+import { ShellComponent } from './components/shell/shell.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -12,7 +15,10 @@ import { AddRecordsComponent } from './components/add-records/add-records.compon
     LoaderComponent,
     CalenderFilterComponent,
     FinicialStatsComponent,
-    AddRecordsComponent
+    AddRecordsComponent,
+    ShellComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule
