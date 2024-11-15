@@ -8,6 +8,7 @@ import { AuthModule } from './auth/auth.module';
 import { HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { loaderInterceptor } from './shared/interceptors/loader.interceptor';
+import { RecordsModule } from './records/records.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { loaderInterceptor } from './shared/interceptors/loader.interceptor';
     AuthModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    RecordsModule
   ],
   providers: [
      provideHttpClient(withInterceptors([loaderInterceptor]))
